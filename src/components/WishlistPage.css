@@ -1,0 +1,120 @@
+.wishlist-container {
+  padding: 50px 60px;
+  font-family: "Poppins", sans-serif;
+  background-color: #F2E8C6; /* soft cream background */
+  min-height: 100vh;
+}
+
+.wishlist-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #800000; /* deep maroon heading */
+}
+
+.empty-wishlist {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #982B1C; /* muted warm red */
+  margin-top: 50px;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Wishlist Card */
+.wishlist-card {
+  background-color: #F2E8C6;
+  border: 1px solid #DAD4B5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(128, 0, 0, 0.1);
+  overflow: hidden;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.wishlist-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(128, 0, 0, 0.2);
+}
+
+/* Image container */
+.wishlist-img-container {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background-color: #DAD4B5;
+}
+
+.wishlist-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Remove button */
+.wishlist-remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(242, 232, 198, 0.9); /* light cream tint */
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #800000;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.wishlist-remove:hover {
+  background: #982B1C;
+  color: #F2E8C6;
+  transform: scale(1.1);
+}
+
+/* Card Info */
+.wishlist-info {
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.wishlist-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 8px 0;
+  color: #800000;
+  min-height: 35px;
+}
+
+.wishlist-price {
+  color: #982B1C;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Move to Bag Button */
+.move-to-bag {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #800000;
+  color: #F2E8C6;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.move-to-bag:hover {
+  background-color: #982B1C;
+  transform: scale(1.05);
+}

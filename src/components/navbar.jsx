@@ -1,50 +1,81 @@
-import React, {useState} from "react";
-import "./navbar.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./navbar.css";
+import SearchBar from "./SearchBar";
+import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
+import { useAuth } from "../context/AuthContext";
+
+function Navbar({user}) {
+  const { cartCount } = useCart();
+  const { wishlist } = useWishlist();
+  const { isuser } = useAuth();
 
 
-function Navbar ({setCategory, cartCount}) {
-    return (
-        <nav className="navbar">
-            {/*Logo */}
-            <div className="logo">Logo</div>
+  <li>
+    {isuser ? (
+      <Link to="/profile">Profile</Link>
+    ) : (
+      <Link to="/signup">Sign Up</Link>
+    )}
 
-            {/* Navigation Links*/}
-            <div className="nav-links">
-                <a href="#" onClick={()=> setCategory("men's clothing")}>Men</a>
-                <a href="#" onClick={()=> setCategory("women's clothing")}>Women</a>
-                <a href="#" onClick={()=> setCategory("kid's clothing")}>Kids</a>
+  </li>
+
+
+  return (
+    <nav className="navbar" >
+      <Link to="/" className="logo">
+      Logo
+      </Link>
+
+      <div className="nav-links">
+        <Link to="/category/all" className="nav-item">All</Link>
+        <Link to="/category/men" className="nav-item">Men</Link>
+        <Link to="/category/women" className="nav-item">Women</Link>
+        <Link to="/category/kids" className="nav-item">Kids</Link>
+        <Link to="/category/sports" className="nav-item">Sports</Link>
+      </div>
+
+      <div className="search-container">
+        <SearchBar />
+      </div>
+
+      <div className="nav-icons">
+        <Link to="/cart" title="Cart">
+          <i className="fa-solid fa-bag-shopping"></i>
+          <span>Cart: {cartCount}</span>
+        </Link>
+
+        <Link to="/wishlist" title="Wishlist">
+          <i className="fa-regular fa-heart"></i>
+          <span>Wishlist: {wishlist?.length || 0}</span>
+        </Link>
+
+
+        {user ? (
+          <Link to="/profile" className="nav-profile" title="Profile">
+            <div className="avatar-circle">
+              {user.displayName
+                ? user.displayName
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")
+                    .toUpperCase()
+                : user.email
+                    .slice(0, 2)
+                    .toUpperCase()}
             </div>
+          </Link>
+        ) : (
+          <Link to="/login" title="Login">
+            <i className="fa-solid fa-user"></i> Login
+          </Link>
+        )}
 
-            {/* Search Bar */}
-            <div className="search-container">
-                <i className="fa-solid fa-magnifying-glass search-icon"></i>
-                <input
-                type="text"
-                placeholder="Search for products, brands and more"
-                className="search-input"
-                />
-            </div>
 
-            {/*Profile / Settings icons*/}
-            
-            <div className="nav-icons">
-                <a href="#" title="Cart">
-                    <i className="fa-solid fa-bag-shopping"></i>
-                    <span>
-                        Cart: <strong>{cartCount}</strong>
-                    </span>
-                </a>
-
-                <a href="#" title="Profile">
-                    <i className="fa-solid fa-user icon"></i>
-                </a>
-
-                <a href="#" title="Settings">
-                    <i className="fa-solid fa-gear icon"></i>
-                </a>
-            </div>
-        </nav>
-    );
-};
+      </div>
+    </nav>
+  );
+}
 
 export default Navbar;

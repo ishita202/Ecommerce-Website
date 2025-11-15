@@ -1,0 +1,278 @@
+.cart-container {
+  padding: 40px 60px;
+  background-color: #F2E8C6; /* soft cream background */
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #800000; /* deep maroon heading */
+  margin-bottom: 40px;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #982B1C; /* warm muted text */
+  margin-top: 60px;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Left Section - Cart Items */
+.cart-items {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-card {
+  display: flex;
+  align-items: center;
+  background: #F2E8C6;
+  border: 1px solid #DAD4B5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(128, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+}
+
+.cart-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(128, 0, 0, 0.2);
+}
+
+.cart-checkbox {
+  margin-right: 15px;
+  width: 18px;
+  height: 18px;
+  accent-color: #800000; /* maroon accent */
+  cursor: pointer;
+}
+
+.cart-img-container {
+  flex: 0 0 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.cart-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #DAD4B5;
+}
+
+.cart-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-name {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #800000;
+}
+
+.cart-brand {
+  font-size: 0.9rem;
+  color: #982B1C;
+  margin-bottom: 10px;
+}
+
+.cart-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #982B1C;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.qty-btn {
+  background-color: #DAD4B5;
+  border: none;
+  font-size: 1.1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #800000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.qty-btn:hover {
+  background-color: #982B1C;
+  color: #F2E8C6;
+}
+
+.cart-actions {
+  margin-top: 10px;
+}
+
+.remove-btn {
+  background: none;
+  border: 1px solid #982B1C;
+  color: #982B1C;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.remove-btn:hover {
+  background-color: #982B1C;
+  color: #F2E8C6;
+}
+
+/* Right Section - Price Summary */
+.price-summary {
+  flex: 1;
+  background-color: #F2E8C6;
+  border: 1px solid #DAD4B5;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(128, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.price-summary h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #800000;
+  margin-bottom: 15px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #982B1C;
+}
+
+.summary-item.total {
+  font-weight: 600;
+  color: #800000;
+  font-size: 1rem;
+}
+
+.discount {
+  color: #982B1C;
+  font-weight: 600;
+}
+
+.place-order-btn {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #800000;
+  color: #F2E8C6;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.place-order-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.place-order-btn:hover:not(:disabled) {
+  background-color: #982B1C;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .cart-content {
+    flex-direction: column;
+  }
+
+  .price-summary {
+    width: 100%;
+  }
+}
+
+
+/* Payment Modal Styling */
+.payment-modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.payment-options {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.payment-options label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.btn-cancel,
+.btn-pay {
+  margin: 15px 10px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-cancel {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-pay {
+  background-color: #800000;
+  color: white;
+}
+
+.btn-pay:hover {
+  background-color: #982B1C;
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 5,
+    "title": "Kids Cotton T-Shirt",
+    "price": 499,
+    "image": "/tshirt.png",
+    "description": "Soft cotton T-shirt for children."
+  },
+  {
+    "id": 6,
+    "title": "Kids Running Shoes",
+    "price": 1299,
+    "image": "/kidshoes.png",
+    "description": "Comfortable running shoes for kids."
+  },
+  {
+    "id": 7,
+    "title": "Kids Toy Car",
+    "price": 699,
+    "image": "/toyCar.png",
+    "description": "Remote-controlled toy car."
+  },
+  {
+    "id": 8,
+    "title": "Kids Backpack",
+    "price": 899,
+    "image": "/backpack.png",
+    "description": "Durable school backpack for kids."
+  }
+]

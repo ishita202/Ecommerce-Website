@@ -1,0 +1,30 @@
+[
+  {
+    "id": 9,
+    "title": "Football",
+    "price": 600,
+    "image": "/cricketBat.png",
+    "description": "Durable outdoor football."
+  },
+  {
+    "id": 10,
+    "title": "Cricket Bat",
+    "price": 1200,
+    "image": "/football.png",
+    "description": "Premium wooden cricket bat."
+  },
+  {
+    "id": 11,
+    "title": "Tennis Racket",
+    "price": 1500,
+    "image": "/tennis.png",
+    "description": "Lightweight tennis racket."
+  },
+  {
+    "id": 12,
+    "title": "Cleats",
+    "price": 800,
+    "image": "/cleats.png",
+    "description": "Official size basketball."
+  }
+]

@@ -1,0 +1,133 @@
+.product-detail-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+  background-color: #F2E8C6;
+}
+
+.product-detail-container img {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  max-width: 500px;
+}
+
+.product-info h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.product-info p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.product-info .price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.product-info button {
+  background-color: #800000;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-info button:hover {
+  background-color: #982B1C;
+}
+
+.image-section img {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-detail-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px 60px;
+  background-color: #fafafa;
+  min-height: 70vh;
+}
+
+.product-info {
+  max-width: 500px;
+}
+
+.price {
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+.add-to-cart-btn {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #982B1C;
+}
+
+.add-to-cart-btn.added {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffeaf1;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.quantity-control button {
+  background-color: #800000;
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quantity-control button:hover {
+  background-color:#982B1C;
+}
+
+.quantity-control span {
+  font-size: 16px;
+  font-weight: 600;
+  width: 20px;
+  text-align: center;
+}

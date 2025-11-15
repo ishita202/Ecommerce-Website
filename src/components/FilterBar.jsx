@@ -1,5 +1,5 @@
 import React from "react";
-import "./FilterBar.css";
+import "../components/FilterBar.css";
 
 function FilterBar({ selectedFilters, setSelectedFilters }) {
   const handleFilterChange = (value) => {

@@ -1,0 +1,64 @@
+.search-results {
+  padding: 40px;
+  background-color: #F2E8C6; /* soft cream background */
+  min-height: 100vh;
+  text-align: center;
+}
+
+.search-results h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #800000; /* deep maroon heading */
+  font-weight: 600;
+}
+
+.product-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.product-section p {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 18px;
+  color: #982B1C; /* warm accent for text */
+}
+
+/* Optional: subtle shadow for the product cards if they exist */
+.product-card {
+  background: #F2E8C6;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(128, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(128, 0, 0, 0.2);
+}
+
+/* Product text styling (if you show product names/prices here) */
+.product-card h3 {
+  color: #800000;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  color: #982B1C;
+  font-weight: 500;
+}
+
+/* Consistent link styling if product cards are clickable */
+.product-card a {
+  text-decoration: none;
+  color: #800000;
+  transition: color 0.3s ease;
+}
+
+.product-card a:hover {
+  color: #982B1C;
+}
